@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RemoteNC</title>
+  </head>
+  <body>
+    {{ mytxt }}
+    <form enctype='multipart/form-data' method='POST'> {% csrf_token %}
+      {{ form.as_p }}
+      <input type='submit' value='save'>
+    </form>
+  </body>
+</html>
