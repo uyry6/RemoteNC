@@ -16,8 +16,9 @@ def imgprocess_create(request):
     }
     return render(request, "img_upload.html", context)
 
+
 def imgprocess_view(request, *args, **kwargs):
-    imgs = IMG.img
+    imgs = IMG.objects.all()
     context = {
         'imgs' : imgs
     }
