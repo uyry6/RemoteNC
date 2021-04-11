@@ -2,6 +2,9 @@ from django.db import models
 
 # Create your models here.
 class IMG(models.Model):
-    title       = models.CharField(max_length=20, default='this is title')
-    img         = models.ImageField()
-    pdf         = models.FileField()
+    title       = models.CharField(default='tile here', max_length=(50))
+    img         = models.FileField()
+
+    @property
+    def name(self):
+        return self.img.url[-3:]
