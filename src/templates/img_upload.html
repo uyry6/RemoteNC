@@ -9,5 +9,11 @@
       {{ form.as_p }}
       <input type='submit' value='save'>
     </form>
+    <h1>Here are your imgs</hi><br/>
+    {% if imgs != None %}
+      {% for item in imgs %}
+        <img src="{{ item.img.url }}"><br/>
+      {% endfor %}
+    {% endif %}
   </body>
 </html>

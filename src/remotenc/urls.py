@@ -21,6 +21,6 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.imgprocess_view, name='imgprocess_view'),
+    # path('', views.imgprocess_view, name='imgprocess_view'),
     path('upload/', views.imgprocess_create, name='imgprocess_create')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
